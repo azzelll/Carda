@@ -1,5 +1,7 @@
 # MVP Roadmap
 
+This document describes the foundation milestones. The [final feature scope for 30 October 2026](final-feature-scope.md) records the full proposal inventory and the user's 17 September instruction: do not remove features unless explicitly requested by the judges. Milestone order does not authorize dropping unfinished features. Quality, privacy, and evidence requirements still apply.
+
 ## Release 0 — foundation
 
 - Kotlin Android project, Compose, navigation, Hilt, baseline CI.
@@ -39,6 +41,6 @@
 
 **Exit:** inference is gated by SQI, model availability, and confidence; failure never blocks the baseline measurement flow.
 
-## Not scheduled
+## Scope beyond the original MVP
 
-Cloud sync, accounts, clinical claims, social features, wearables, continuous monitoring, and new physiological estimates are excluded until explicitly approved.
+Proposal-listed account flows, additional physiological estimates, profile functions, export, and other final deliverables remain tracked in the final feature scope, including unresolved inconsistencies and validation dependencies. They must not be silently removed based on the narrower original MVP. Cloud sync, social features, wearables, and continuous background monitoring are not added implicitly. Diagnostic claims and unvalidated numerical outputs remain disallowed.
