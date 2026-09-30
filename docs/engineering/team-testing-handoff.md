@@ -2,6 +2,15 @@
 
 Prepared 30 September 2026 for a teammate using a physical Android phone and an AI assistant. The Android repository and historical engineering summaries are in Git; **APK/AAB files, `/private/tmp` command logs, test mail, and participant data are intentionally not in Git**. A fresh clone must build its own APK and record its own SHA-256. The latest local software/setup rerun is E-20260930-011; no physical phone, reference-instrument or participant validation has been recorded in [`evidence-index.md`](evidence-index.md).
 
+The implementation is pushed on `codex/carda-build`; `main` still contains the scaffold. In a fresh clone, select the implementation branch before following this guide:
+
+```bash
+git clone https://github.com/azzelll/Carda.git
+cd Carda
+git switch --track origin/codex/carda-build
+git rev-parse HEAD
+```
+
 The copy-ready AI instructions are in [`team-testing-ai-prompt.md`](team-testing-ai-prompt.md).
 
 ## Read in order
