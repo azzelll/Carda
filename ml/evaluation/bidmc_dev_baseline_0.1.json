@@ -1,0 +1,22 @@
+{
+  "claim": "exploratory hospital sensor PPG development subset; no phone-camera validation",
+  "method_version": "bidmc-rr-baseline-0.1",
+  "recording_max_annotator_difference_breaths_per_min": 3.1333333333333333,
+  "recording_max_mae_vs_annotator_1_breaths_per_min": 7.866666666666666,
+  "recording_max_mae_vs_annotator_2_breaths_per_min": 7.866666666666666,
+  "recording_mean_bias_vs_annotator_1_breaths_per_min": -1.5696969696969698,
+  "recording_mean_bias_vs_annotator_2_breaths_per_min": -1.896969696969697,
+  "recording_mean_mae_vs_annotator_1_breaths_per_min": 2.890909090909091,
+  "recording_mean_mae_vs_annotator_2_breaths_per_min": 2.757575757575758,
+  "recording_mean_mean_absolute_annotator_difference_breaths_per_min": 0.3878787878787879,
+  "recordings_attempted": 11,
+  "recordings_with_estimate": 11,
+  "rejected_windows": {
+    "no_annotated_reference": 0,
+    "no_candidate_estimate": 0
+  },
+  "split_version": "bidmc-subject-v1",
+  "subject_groups_reserved_development": 11,
+  "windows_attempted_overlapping": 165,
+  "windows_evaluated_overlapping": 165
+}

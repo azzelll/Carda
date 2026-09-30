@@ -1,0 +1,7 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Temporary engineering C mark. Final artwork awaits the provided Figma design. -->
+    <path android:fillColor="@android:color/white"
+        android:pathData="M69,36 C61,28 45,28 37,37 C29,46 29,62 37,71 C45,80 61,80 69,72 L62,65 C57,70 48,70 44,65 C39,60 39,48 44,43 C48,38 57,38 62,43 Z" />
+</vector>

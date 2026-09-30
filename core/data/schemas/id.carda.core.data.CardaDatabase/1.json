@@ -1,0 +1,180 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "cb7ec001786c9659e930a5f59ecd8aca",
+    "entities": [
+      {
+        "tableName": "measurement_summaries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `accountId` TEXT NOT NULL, `measuredAtEpochMillis` INTEGER NOT NULL, `validDurationMillis` INTEGER NOT NULL, `qualityScore` REAL NOT NULL, `qualityIssues` TEXT NOT NULL, `evaluatedSamples` INTEGER NOT NULL, `pipelineVersion` TEXT NOT NULL, `manufacturer` TEXT NOT NULL, `deviceModel` TEXT NOT NULL, `androidApiLevel` INTEGER NOT NULL, `abi` TEXT NOT NULL, `appVersion` TEXT NOT NULL, `hasRearCamera` INTEGER NOT NULL, `hasTorch` INTEGER NOT NULL, `analysisWidth` INTEGER, `analysisHeight` INTEGER, `observedFramesPerSecond` REAL, `exposureDescription` TEXT, `flashDescription` TEXT, `rejectionReasons` TEXT NOT NULL, `lastQualityScore` REAL, `supportClassification` TEXT NOT NULL, `metricStatuses` TEXT NOT NULL, `modelVersion` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accountId",
+            "columnName": "accountId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measuredAtEpochMillis",
+            "columnName": "measuredAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validDurationMillis",
+            "columnName": "validDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "qualityScore",
+            "columnName": "qualityScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "qualityIssues",
+            "columnName": "qualityIssues",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evaluatedSamples",
+            "columnName": "evaluatedSamples",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pipelineVersion",
+            "columnName": "pipelineVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manufacturer",
+            "columnName": "manufacturer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceModel",
+            "columnName": "deviceModel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "androidApiLevel",
+            "columnName": "androidApiLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abi",
+            "columnName": "abi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appVersion",
+            "columnName": "appVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasRearCamera",
+            "columnName": "hasRearCamera",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasTorch",
+            "columnName": "hasTorch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "analysisWidth",
+            "columnName": "analysisWidth",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "analysisHeight",
+            "columnName": "analysisHeight",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "observedFramesPerSecond",
+            "columnName": "observedFramesPerSecond",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "exposureDescription",
+            "columnName": "exposureDescription",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "flashDescription",
+            "columnName": "flashDescription",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "rejectionReasons",
+            "columnName": "rejectionReasons",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastQualityScore",
+            "columnName": "lastQualityScore",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "supportClassification",
+            "columnName": "supportClassification",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metricStatuses",
+            "columnName": "metricStatuses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelVersion",
+            "columnName": "modelVersion",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_measurement_summaries_accountId_measuredAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "accountId",
+              "measuredAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_measurement_summaries_accountId_measuredAtEpochMillis` ON `${TABLE_NAME}` (`accountId`, `measuredAtEpochMillis`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cb7ec001786c9659e930a5f59ecd8aca')"
+    ]
+  }
+}

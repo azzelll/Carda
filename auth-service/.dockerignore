@@ -1,0 +1,4 @@
+target/*.original
+target/surefire-reports
+.env
+.git

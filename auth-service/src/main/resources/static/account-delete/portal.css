@@ -1,0 +1,13 @@
+:root { font-family: system-ui, sans-serif; color: #183c4c; background: #f6f8fa; }
+body { margin: 0; }
+main { max-width: 42rem; margin: auto; padding: 1.5rem; }
+p { line-height: 1.6; }
+label { display: block; margin: 1rem 0 .4rem; }
+input:not([type="checkbox"]), button { box-sizing: border-box; width: 100%; min-height: 48px; font: inherit; padding: .7rem; }
+input:not([type="checkbox"]) { border: 1px solid #526974; border-radius: .4rem; background: white; }
+button { margin-top: 1rem; border: 0; border-radius: .4rem; background: #183c4c; color: white; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+:focus-visible { outline: 3px solid #216bb5; outline-offset: 3px; }
+.confirmation { display: flex; gap: .7rem; align-items: flex-start; line-height: 1.5; }
+.confirmation input { min-width: 24px; min-height: 24px; }
+#status { font-weight: 600; }

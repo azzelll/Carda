@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Hapus akun daring — Carda</title>
+  <link rel="stylesheet" href="portal.css">
+  <script src="portal.js" defer></script>
+</head>
+<body>
+<main>
+  <h1>Hapus akun daring Carda</h1>
+  <p>Halaman ini hanya menghapus identitas akun, kode verifikasi/reset, dan sesi pada server. Data profil kesehatan, hasil, dan riwayat tersimpan di ponsel. Menghapus akun melalui aplikasi juga membersihkan data lokal akun pada ponsel tersebut.</p>
+  <p>Jika menghapus akun di sini, hapus data lokal pada setiap ponsel melalui pengaturan Carda atau pengaturan aplikasi Android. Data kesehatan tidak dipulihkan dari server. Tindakan penghapusan akun tidak dapat dibatalkan.</p>
+  <form id="login-form">
+    <h2>1. Masuk ke akun Anda</h2>
+    <label for="email">Email</label>
+    <input id="email" type="email" autocomplete="username" maxlength="254" required>
+    <label for="password">Kata sandi</label>
+    <input id="password" type="password" autocomplete="current-password" maxlength="128" required>
+    <button type="submit">Masuk untuk melanjutkan</button>
+  </form>
+  <form id="delete-form" hidden>
+    <h2>2. Konfirmasi penghapusan</h2>
+    <p>Anda berhasil masuk. Ketik kembali kata sandi akun untuk mengonfirmasi.</p>
+    <label for="confirm-password">Kata sandi konfirmasi</label>
+    <input id="confirm-password" type="password" autocomplete="current-password" maxlength="128" required>
+    <label class="confirmation"><input id="confirm-delete" type="checkbox" required> Saya memahami penghapusan identitas daring ini tidak dapat dibatalkan dan data ponsel perlu dihapus terpisah.</label>
+    <button type="submit">Hapus akun daring secara permanen</button>
+    <button id="cancel" type="button">Batal dan keluar</button>
+  </form>
+  <p id="status" role="status" aria-live="polite"></p>
+  <p>Lupa kata sandi? Gunakan alur reset kata sandi pada aplikasi Carda. Portal ini tidak meminta atau menerima hasil pengukuran, profil kesehatan, PPG, atau gambar kamera.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+name: Carda checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - uses: android-actions/setup-android@v4
+      - name: Install Android API 36
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Unit tests, debug APK, and unsigned release candidates
+        run: ./gradlew test :app:assembleDebug :app:assembleRelease :app:bundleRelease --no-daemon
+      - name: Lint after generated sources
+        run: ./gradlew lint --no-daemon
+      - name: Inspect release APK privacy boundary
+        run: python3 scripts/check_android_privacy.py
+
+  identity-service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: auth-service/pom.xml
+      - name: Identity service unit tests
+        run: mvn -B -f auth-service/pom.xml test
+      - name: Disposable local SMTP sink test
+        run: python3 -m unittest discover -s auth-service/scripts -p 'test_*.py' -v
+
+  landing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: landing/package-lock.json
+      - name: Install exact dependencies
+        run: npm ci
+        working-directory: landing
+      - name: Check types
+        run: npm run typecheck
+        working-directory: landing
+      - name: Build static site
+        run: npm run build
+        working-directory: landing

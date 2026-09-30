@@ -1,0 +1,31 @@
+{
+  "synthetic_input_only": true,
+  "model_sha256": "4cbc5a4c7cb57edac950129e5ce4e34d32334e182801e03b7fa8027c475341bb",
+  "runtime": "bundled LiteRT 2.2.0 CPU; one thread; XNNPACK disabled",
+  "android_api": 36,
+  "manufacturer": "Google",
+  "model": "sdk_gphone64_arm64",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "load_millis": 246.818042,
+  "invocation_millis": [
+    104.620958,
+    41.887292,
+    19.862,
+    21.988875
+  ],
+  "sampled_total_pss_kib": [
+    64021,
+    187034,
+    257980,
+    258172,
+    258282,
+    258400
+  ],
+  "max_observed_pss_kib": 258400,
+  "max_absolute_difference": 5.960464477539062e-07,
+  "absolute_tolerance": 1e-05,
+  "confidence_available": false,
+  "limitations": "Emulator synthetic parity only; sampled PSS is not peak RAM; no camera/physiology validation"
+}

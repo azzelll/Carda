@@ -1,0 +1,81 @@
+{
+  "already_inspected_development_records": [
+    "01",
+    "02"
+  ],
+  "claim": "split reservation only; no model, physiological validity or phone-camera evaluation",
+  "dataset": "BIDMC PPG and Respiration v1.0.0",
+  "record_counts": {
+    "development": 11,
+    "held_out": 27,
+    "validation": 15
+  },
+  "record_numbers": {
+    "development": [
+      "01",
+      "02",
+      "11",
+      "16",
+      "24",
+      "29",
+      "30",
+      "32",
+      "43",
+      "45",
+      "46"
+    ],
+    "held_out": [
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "12",
+      "13",
+      "14",
+      "15",
+      "19",
+      "25",
+      "26",
+      "27",
+      "28",
+      "33",
+      "35",
+      "37",
+      "38",
+      "39",
+      "40",
+      "42",
+      "47",
+      "51",
+      "52"
+    ],
+    "validation": [
+      "17",
+      "18",
+      "20",
+      "21",
+      "22",
+      "23",
+      "31",
+      "34",
+      "36",
+      "41",
+      "44",
+      "48",
+      "49",
+      "50",
+      "53"
+    ]
+  },
+  "rule": "same MIMIC subject grouped; previously inspected groups development; remaining groups assigned by SHA-256(split_version:subject) first 64 bits, intervals [0,.25), [.25,.50), [.50,1)",
+  "split_version": "bidmc-subject-v1",
+  "subject_group_counts": {
+    "development": 11,
+    "held_out": 23,
+    "validation": 12
+  }
+}

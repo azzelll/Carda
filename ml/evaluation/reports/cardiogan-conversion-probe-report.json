@@ -1,0 +1,49 @@
+{
+  "status": "restored_cpu_synthetic_smoke_only",
+  "source_repository": "https://github.com/pritamqu/ppg2ecg-cardiogan",
+  "source_commit": "d7239b0004a138101bdf597961be4d0af8ea2d5e",
+  "source_license": "CC-BY-NC-4.0",
+  "tensorflow": "2.21.0",
+  "source_dtype": "float64",
+  "input_shape": [
+    1,
+    512
+  ],
+  "output_shape": [
+    1,
+    512
+  ],
+  "generator_parameters": 28237255,
+  "all_model_objects_restored": true,
+  "synthetic_input_only": true,
+  "deterministic": true,
+  "first_call_seconds": 0.040164,
+  "output_sha256": "d4d73998d6304d9dcb288944df1a497fe41625710c14b5bf7d1525cf214a6ecd",
+  "source_adaptations": [
+    "Input shape expressed as tuple",
+    "unused addons instance_norm explicitly unsupported; default layer_norm unchanged"
+  ],
+  "unverified": [
+    "physiological_validity",
+    "camera_domain",
+    "confidence_calibration",
+    "r_peak_rr_evaluation",
+    "Android_CPU_memory_latency"
+  ],
+  "conversion": {
+    "research_only": true,
+    "format": "float32_builtin_ops",
+    "bytes": 112990672,
+    "sha256": "4cbc5a4c7cb57edac950129e5ce4e34d32334e182801e03b7fa8027c475341bb",
+    "synthetic_fixtures": 4,
+    "absolute_tolerance": 1e-05,
+    "max_float64_to_float32_error": 5.644633770396368e-07,
+    "max_float32_to_lite_error": 1.6763806343078613e-06,
+    "host_cpu_invocation_seconds": [
+      0.01706,
+      0.017341,
+      0.01734,
+      0.017395
+    ]
+  }
+}

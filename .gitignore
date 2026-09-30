@@ -5,6 +5,13 @@ build/
 local.properties
 .idea/
 *.iml
+**/target/
+**/node_modules/
+**/.next/
+landing/out/
+**/__pycache__/
+*.pyc
+.pytest_cache/
 
 # Secrets and local configuration
 .env

@@ -1,0 +1,68 @@
+{
+  "repository": "https://github.com/pritamqu/ppg2ecg-cardiogan",
+  "commit": "d7239b0004a138101bdf597961be4d0af8ea2d5e",
+  "release_tag": "checkpoints",
+  "assets": [
+    {
+      "name": "cardiogan_all_models.zip",
+      "size": 1802015513,
+      "digest": null,
+      "browser_download_url": "https://github.com/pritamqu/ppg2ecg-cardiogan/releases/download/checkpoints/cardiogan_all_models.zip"
+    }
+  ],
+  "files": [
+    {
+      "name": "LICENSE",
+      "sha256": "5a4dd92e67255ef1a58bb86f5efc20c43d046493e71d4f3bfd1721e29fcadfc6"
+    },
+    {
+      "name": "README.md",
+      "sha256": "a56083f4594edff6a3d0a9405f187f6fca447918c241cdd5da1d18fbee7cbe24"
+    },
+    {
+      "name": "codes/test_cardiogan.py",
+      "sha256": "3b8356669e7ec83c2ac451659e01070eacfb0c143aabb2c656cfe25f4d880a7c"
+    },
+    {
+      "name": "codes/preprocessing.py",
+      "sha256": "19eb0dc79b8e500479319e4dbad88f8232d6c2d73ce8ad224f176d11d26add0e"
+    },
+    {
+      "name": "codes/module.py",
+      "sha256": "fb2044ec75b819a78bef725cc8d5d332be2be3400c1213fa3d65ae63b94c0de8"
+    },
+    {
+      "name": "codes/layers.py",
+      "sha256": "fcf9a31161d939562d5305664319629d5d6d9c72ec1bb8d8da95eefd035a780f"
+    }
+  ],
+  "status": "archive CRC checked and extracted only to temporary scratch; no inference or shipped model",
+  "license": "CC-BY-NC-4.0; distribution applicability remains a team review",
+  "archive": {
+    "archive_sha256": "585f6615573831cf69a56d81b9ae2ff61e1c23b7f340e10912257eed54a75f98",
+    "archive_bytes": 1802015513,
+    "upstream_digest_available": false,
+    "members": [
+      {
+        "name": "weights/",
+        "bytes": 0
+      },
+      {
+        "name": "weights/checkpoint",
+        "bytes": 1863
+      },
+      {
+        "name": "weights/ckpt-13.data-00000-of-00002",
+        "bytes": 100267
+      },
+      {
+        "name": "weights/ckpt-13.data-00001-of-00002",
+        "bytes": 1894189556
+      },
+      {
+        "name": "weights/ckpt-13.index",
+        "bytes": 47806
+      }
+    ]
+  }
+}
